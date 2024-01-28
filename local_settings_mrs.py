@@ -4,7 +4,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mrs_database',
-        'HOST': 'mrs-app-database',
+        'HOST': 'database',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'PORT': '5432',

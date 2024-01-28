@@ -4,7 +4,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crlw_database',
-        'HOST': 'crlw-app-database',
+        'HOST': 'database',
         'USER': 'postgres',
         'PASSWORD': 'password',
         'PORT': '5432',
