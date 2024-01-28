@@ -36,7 +36,7 @@ services:
 ######################### CRLW #########################################
   crlw-app-backend:
     image: ladymeek/crlw-backend-do:sha-5f6a4a4
-    container_name: api
+    container_name: crlw_api
     # build: ./backend
     expose:
       - "8000"
@@ -54,7 +54,7 @@ services:
           memory: 200M
   crlw-app-frontend:
     image: ladymeek/crlw-frontend-do:sha-83df13f
-    container_name: frontend
+    container_name: crlw_frontend
     # build: ./frontend
     expose:
       - "80"
@@ -69,7 +69,7 @@ services:
 ######################### MRS #########################################
   mrs-app-backend:
     image: ladymeek/tlb-backend-do:sha-961800a
-    container_name: api
+    container_name: mrs_api
     # build: ./backend
     expose:
       - "8000"
@@ -87,7 +87,7 @@ services:
           memory: 200M
   mrs-app-frontend:
     image: ladymeek/tlb-frontend-do:sha-4aa0035
-    container_name: frontend
+    container_name: mrs_frontend
     # build: ./frontend
     expose:
       - "80"
