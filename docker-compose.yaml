@@ -34,7 +34,7 @@ services:
           memory: 500M
           ######################### CRLW #########################################
   crlw-app-backend:
-    image: ladymeek/crlw-backend-do:sha-5f6a4a4
+    image: ladymeek/crlw-backend-do:sha-b2a5725
     container_name: crlw_api
     # build: ./backend
     expose:
