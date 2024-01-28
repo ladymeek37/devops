@@ -16,7 +16,7 @@ services:
       resources:
         limits:
           memory: 150M
-######################### CRLW #########################################
+
   database:
     image: postgres:16
     container_name: database
@@ -28,11 +28,12 @@ services:
     restart: always
     volumes:
       - db-data:/var/lib/mysql
-      - ./init.sh:/docker-entrypoint-initdb.d
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh
     deploy:
       resources:
         limits:
           memory: 500M
+######################### CRLW #########################################
   crlw-app-backend:
     image: ladymeek/crlw-backend-do:sha-5f6a4a4
     container_name: api
