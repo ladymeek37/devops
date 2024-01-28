@@ -16,7 +16,6 @@ services:
       resources:
         limits:
           memory: 150M
-
   database:
     image: postgres:16
     container_name: database
@@ -33,7 +32,7 @@ services:
       resources:
         limits:
           memory: 500M
-######################### CRLW #########################################
+          ######################### CRLW #########################################
   crlw-app-backend:
     image: ladymeek/crlw-backend-do:sha-5f6a4a4
     container_name: crlw_api
@@ -65,10 +64,10 @@ services:
       resources:
         limits:
           memory: 200M
-######################### CRLW #########################################
-######################### MRS #########################################
+          ######################### CRLW #########################################
+          ######################### MRS #########################################
   mrs-app-backend:
-    image: ladymeek/tlb-backend-do:sha-961800a
+    image: ladymeek/tlb-backend-do:sha-4e4f07f
     container_name: mrs_api
     # build: ./backend
     expose:
@@ -98,7 +97,6 @@ services:
       resources:
         limits:
           memory: 200M
-
 volumes:
   db-data:
   nginx_secrets:
