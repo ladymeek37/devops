@@ -79,7 +79,7 @@ services:
       sh -c "python manage.py makemigrations && python manage.py migrate --fake-initial && python manage.py runserver 0.0.0.0:8000"
 
     volumes:
-      - ~/local_settings_mrs.py:/user/src/app/drf_jwt_backend/local_settings.py
+      - ./local_settings_mrs.py:/user/src/app/drf_jwt_backend/local_settings.py
     deploy:
       resources:
         limits:
