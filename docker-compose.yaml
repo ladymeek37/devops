@@ -69,7 +69,7 @@ services:
     volumes:
       - ./local_settings_mrs.py:/user/src/app/drf_jwt_backend/local_settings.py
   mrs-app-frontend:
-    image: ladymeek/tlb-frontend-do:sha-bb86016
+    image: ladymeek/tlb-frontend-do:sha-a873284
     container_name: mrs_frontend
     # build: ./frontend
     expose:
