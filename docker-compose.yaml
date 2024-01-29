@@ -12,10 +12,6 @@ services:
       - ./nginx-files:/etc/nginx/user_conf.d
       - nginx_secrets:/etc/letsencrypt
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 150M
   database:
     image: postgres:16
     container_name: database
