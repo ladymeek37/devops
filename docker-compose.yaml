@@ -47,10 +47,6 @@ services:
 
     volumes:
       - ./local_settings_crlw.py:/user/src/app/drf_jwt_backend/local_settings.py
-    deploy:
-      resources:
-        limits:
-          memory: 200M
   crlw-app-frontend:
     image: ladymeek/crlw-frontend-do:sha-83df13f
     container_name: crlw_frontend
@@ -60,10 +56,6 @@ services:
     depends_on:
       - "crlw-app-backend"
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 200M
           ######################### CRLW #########################################
           ######################### MRS #########################################
   mrs-app-backend:
@@ -80,10 +72,6 @@ services:
 
     volumes:
       - ./local_settings_mrs.py:/user/src/app/drf_jwt_backend/local_settings.py
-    deploy:
-      resources:
-        limits:
-          memory: 200M
   mrs-app-frontend:
     image: ladymeek/tlb-frontend-do:sha-4aa0035
     container_name: mrs_frontend
@@ -93,10 +81,6 @@ services:
     depends_on:
       - "mrs-app-backend"
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 200M
 volumes:
   db-data:
   nginx_secrets:
