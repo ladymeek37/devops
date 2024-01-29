@@ -52,8 +52,8 @@ services:
     depends_on:
       - "crlw-app-backend"
     restart: always
-          ######################### CRLW #########################################
-          ######################### MRS #########################################
+    ######################### CRLW #########################################
+    ######################### MRS #########################################
   mrs-app-backend:
     image: ladymeek/tlb-backend-do:sha-4e4f07f
     container_name: mrs_api
@@ -69,7 +69,7 @@ services:
     volumes:
       - ./local_settings_mrs.py:/user/src/app/drf_jwt_backend/local_settings.py
   mrs-app-frontend:
-    image: ladymeek/tlb-frontend-do:sha-4aa0035
+    image: ladymeek/tlb-frontend-do:sha-7a8eaa0
     container_name: mrs_frontend
     # build: ./frontend
     expose:
